@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotografia - A Arte de Contar Histórias</title>
+    <title>Contato - Nome do Estúdio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <header class="hero">
+    <header class="header-internal">
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">Nome do Estúdio</a>
@@ -22,38 +21,20 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-        <div class="hero-content">
-            <h1>Capturando a Essência, Congelando o Tempo.</h1>
-            <p>Descubra a arte de contar histórias com a luz.</p>
-        </div>
     </header>
 
-    <section class="section main-links">
-        <h2>Conheça Mais Sobre a Fotografia</h2>
-        <div class="link-grid">
-            <a href="profissao.html" class="link-card">
-                <i class="fas fa-info-circle"></i>
-                <h3>A Profissão</h3>
-                <p>O que é ser um fotógrafo? Descubra o mercado, áreas de atuação e equipamentos essenciais.</p>
-            </a>
-            <a href="habilidades.html" class="link-card">
-                <i class="fas fa-cogs"></i>
-                <h3>Habilidades</h3>
-                <p>Domine as técnicas e conhecimentos técnicos que transformam um hobby em carreira.</p>
-            </a>
-            <a href="portfolio.html" class="link-card">
-                <i class="fas fa-camera-retro"></i>
-                <h3>Portfólio</h3>
-                <p>Inspire-se com uma galeria completa de trabalhos artísticos em diferentes estilos.</p>
-            </a>
-            <a href="contato.html" class="link-card">
-                <i class="fas fa-envelope"></i>
-                <h3>Contato</h3>
-                <p>Entre em contato para saber mais sobre nossos serviços, orçamentos e aulas.</p>
-            </a>
-        </div>
-    </section>
-    
+    <main class="section content-page">
+        <section id="contact-form-section">
+            <h2>Vamos Conversar?</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Nome Completo" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
     <footer>
         <div class="footer-content">
             <p>&copy; 2025 Nome do Estúdio. Todos os direitos reservados.</p>
