@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fotografia Profissional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
     <nav>
+      <div class="logo">
+        <h1>Fotografia Pro</h1>
+      </div>
       <ul>
         <li><a href="#home">Início</a></li>
-        <li><a href="#sobre">Sobre a Fotografia</a></li>
+        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#equipamentos">Equipamentos</a></li>
         <li><a href="#carreira">Carreira</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -22,20 +26,76 @@
 
   <!-- Seção de Início -->
   <section id="home" class="section-home">
-    <h1>Bem-vindo ao Mundo da Fotografia Profissional!</h1>
-    <p>A fotografia é uma arte e uma profissão. Neste site, você encontrará tudo o que precisa saber para seguir essa carreira incrível.</p>
+    <div class="home-content">
+      <h1>Bem-vindo ao Mundo da Fotografia Profissional</h1>
+      <p>Capture momentos, conte histórias e se torne um mestre na arte de fotografar.</p>
+      <a href="#sobre" class="btn-primary">Saiba Mais</a>
+    </div>
   </section>
 
   <!-- Seção Sobre -->
   <section id="sobre" class="section-about">
-    <h2>O Que é a Fotografia Profissional?</h2>
-    <p>A fotografia profissional vai além de capturar imagens; ela é sobre contar histórias, capturar momentos e transformar um simples clique em arte.</p>
+    <div class="container">
+      <h2>O Que é a Fotografia Profissional?</h2>
+      <p>A fotografia profissional vai além de capturar imagens; ela é sobre contar histórias, capturar momentos e transformar um simples clique em arte.</p>
+    </div>
   </section>
 
   <!-- Seção Equipamentos -->
   <section id="equipamentos" class="section-equipamentos">
-    <h2>Equipamentos Necessários</h2>
-    <ul>
-      <li><strong>Câmeras:</strong> DSLR ou mirrorless são as mais indicadas.</li>
-      <li><strong>Lentes:</strong> Lentes prime, como a 50mm f/1.8, são perfeitas para retratos.</li>
-      <li><strong>
+    <div class="container">
+      <h2>Equipamentos Necessários</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Câmeras</h3>
+          <p>As câmeras DSLR ou mirrorless são as melhores para quem deseja entrar na fotografia profissional.</p>
+        </div>
+        <div class="card">
+          <h3>Lentes</h3>
+          <p>As lentes prime, como a 50mm f/1.8, são perfeitas para retratos nítidos e com fundo desfocado.</p>
+        </div>
+        <div class="card">
+          <h3>Iluminação</h3>
+          <p>Softboxes e flashes são essenciais para um bom controle de luz em qualquer situação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Carreira -->
+  <section id="carreira" class="section-career">
+    <div class="container">
+      <h2>Como Iniciar Sua Carreira</h2>
+      <p>Aprenda as habilidades técnicas, crie um portfólio impactante e construa uma rede de contatos forte para se destacar no mercado.</p>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="section-contact">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p>Tem alguma dúvida ou deseja contratar um fotógrafo? Fale conosco!</p>
+      <form action="#">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Fotografia Profissional. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

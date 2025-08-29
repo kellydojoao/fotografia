@@ -1,4 +1,4 @@
-/* Resetando alguns estilos padrões */
+/* Resetando estilos */
 * {
   margin: 0;
   padding: 0;
@@ -7,111 +7,194 @@
 
 /* Estilo do Corpo */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
   color: #333;
+  background-color: #f5f5f5;
 }
 
+/* Cabeçalho */
 header {
-  background-color: #333;
+  background: #222;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header .logo h1 {
+  font-size: 24px;
   color: #fff;
-  padding: 10px 0;
-  text-align: center;
+  font-weight: 600;
 }
 
 header nav ul {
   list-style: none;
+  display: flex;
 }
 
 header nav ul li {
-  display: inline;
-  margin: 0 15px;
+  margin-left: 30px;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
   color: #FFD700;
 }
 
-/* Estilo das Seções */
-section {
-  padding: 40px 20px;
+/* Seção Home */
+.section-home {
+  background: url('https://via.placeholder.com/1500x800') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  background-position: center;
+}
+
+.section-home h1 {
+  font-size: 48px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-h1, h2 {
-  color: #333;
+.section-home p {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
-.section-home {
-  background-color: #1c1c1c;
-  color: #fff;
-  text-align: center;
-}
-
-.section-about, .section-equipamentos, .section-career, .section-contact {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-ul {
-  list-style-type: none;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-form label {
-  display: block;
-  margin-top: 10px;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-form button:hover {
+.btn-primary {
   background-color: #FFD700;
+  padding: 15px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-footer {
+.btn-primary:hover {
+  background-color: #ffcc00;
+}
+
+/* Seção Sobre */
+.section-about {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.section-about .container {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  padding: 20px 0;
-  background-color: #333;
-  color: #fff;
 }
 
-footer p {
-  font-size: 14px;
+.section-about h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-/* Estilo de Responsividade */
-@media (max-width: 768px) {
-  header nav ul {
-    display: block;
-    text-align: center;
-  }
-
-  header nav ul li {
-    margin-bottom: 10px;
-  }
+.section-about p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
+
+/* Seção Equipamentos */
+.section-equipamentos {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.section-equipamentos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-equipamentos h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 30px;
+  width: 30%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Seção Carreira */
+.section-career {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.section-career .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-career h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.section-career p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Seção Contato */
+.section-contact {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center
