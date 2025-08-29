@@ -1,8 +1,9 @@
 /* Paleta de Cores:
-   - Branco Gelo: #F2F2F2
-   - Cinza Chumbo: #333333
-   - Dourado Suave: #D4A05B
-   - Rosa Pastel: #FAD7DF */
+   - Preto: #000000
+   - Branco: #FFFFFF
+   - Cinza Escuro: #333333
+   - Cinza Claro: #F2F2F2
+   - Dourado Suave: #D4A05B */
 
 /* Estilos Globais */
 body {
@@ -14,97 +15,159 @@ body {
     line-height: 1.6;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    color: #333333;
 }
 
 h1 {
-    font-size: 3em;
-    color: #F2F2F2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3.5em;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     color: #D4A05B;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    color: #D4A05B;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .section {
-    padding: 60px 5%;
+    padding: 80px 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Estilo do Botão (CTA) */
-.cta-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #D4A05B;
-    color: #F2F2F2;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #B2884C;
-}
-
-/* Seção Hero (Boas-Vindas) */
+/* Cabeçalho e Menu */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1549740529-d04b6b617066?q=80&w=1770&auto=format&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1549740529-d04b6b617066?q=80&w=1770&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     color: white;
 }
 
-.hero-content {
-    padding: 20px;
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o menu */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.hero-content p {
-    font-size: 1.2em;
-    font-weight: 300;
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+    color: #D4A05B;
+    border-bottom: 2px solid #D4A05B;
+}
+
+.hero-content {
+    flex-grow: 1; /* Centraliza o conteúdo verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Seção Sobre */
 .about-section {
-    background-color: #FAD7DF;
     text-align: center;
+    background-color: #F2F2F2;
 }
 
-.about-section p {
+.about-content {
     max-width: 800px;
-    margin: 0 auto 30px;
+    margin: 0 auto 40px;
 }
 
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .image-gallery img {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+}
+
+/* Seção Habilidades */
+.skills-section {
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill-item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item i {
+    font-size: 3em;
+    color: #D4A05B;
+    margin-bottom: 15px;
 }
 
 /* Seção Portfólio */
@@ -133,8 +196,8 @@ h2 {
 
 /* Seção de Contato */
 .contact-section {
-    background-color: #FAD7DF;
-    text-align: center;
+    background-color: #F2F2F2;
+    padding: 80px 5%;
 }
 
 .contact-form {
@@ -151,7 +214,7 @@ h2 {
     padding: 12px;
     border: 1px solid #D4A05B;
     border-radius: 5px;
-    background-color: #F2F2F2;
+    background-color: #FFFFFF;
     color: #333333;
 }
 
@@ -159,32 +222,80 @@ h2 {
     resize: vertical;
 }
 
-.contact-form .cta-button {
-    align-self: flex-start;
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #D4A05B;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #B2884C;
 }
 
 /* Rodapé */
 footer {
-    background-color: #333333;
-    color: #F2F2F2;
+    background-color: #000000;
+    color: #FFFFFF;
     text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
+    padding: 30px 5%;
 }
 
-footer p {
-    margin: 5px 0;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Media Queries para Responsividade */
+.footer-icons a {
+    color: #F2F2F2;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #D4A05B;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        position: static;
+        background-color: #000000;
+        padding-top: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .hero {
+        min-height: auto;
+        padding-top: 20px;
+    }
     h1 {
         font-size: 2.5em;
     }
-
-    h2 {
-        font-size: 1.8em;
+    .image-gallery, .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-icons {
+        margin-top: 10px;
     }
 }
