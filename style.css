@@ -1,160 +1,190 @@
-/* Resetando estilos */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Paleta de Cores:
+   - Branco Gelo: #F2F2F2
+   - Cinza Chumbo: #333333
+   - Dourado Suave: #D4A05B
+   - Rosa Pastel: #FAD7DF */
 
-/* Estilo do Corpo */
+/* Estilos Globais */
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+    color: #333333;
+    line-height: 1.6;
 }
 
-/* Cabeçalho */
-header {
-  background: #222;
-  padding: 20px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+h1 {
+    font-size: 3em;
+    color: #F2F2F2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-header .logo h1 {
-  font-size: 28px;
-  color: #FFD700;
-  font-weight: 600;
+h2 {
+    font-size: 2em;
+    color: #D4A05B;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
+.section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header nav ul li {
-  margin-left: 30px;
+/* Estilo do Botão (CTA) */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #D4A05B;
+    color: #F2F2F2;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 18px;
-  transition: color 0.3s ease;
+.cta-button:hover {
+    background-color: #B2884C;
 }
 
-header nav ul li a:hover {
-  color: #FFD700;
+/* Seção Hero (Boas-Vindas) */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1549740529-d04b6b617066?q=80&w=1770&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-/* Seção Home */
-.section-home {
-  background: url('https://via.placeholder.com/1500x800') center/cover no-repeat;
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
-  background-position: center;
-  position: relative;
+.hero-content {
+    padding: 20px;
 }
 
-.section-home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.section-home .home-content {
-  position: relative;
-  z-index: 2;
-}
-
-.section-home h1 {
-  font-size: 48px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.section-home p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.btn-primary {
-  background-color: #FFD700;
-  padding: 15px 30px;
-  font-size: 16px;
-  text-decoration: none;
-  color: #333;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #ffcc00;
+.hero-content p {
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 /* Seção Sobre */
-.section-about {
-  background-color: #fff;
-  padding: 80px 20px;
-  text-align: center;
+.about-section {
+    background-color: #FAD7DF;
+    text-align: center;
 }
 
-.section-about h2 {
-  font-size: 36px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  margin-bottom: 20px;
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 30px;
 }
 
-.section-about p {
-  font-size: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* Seção Equipamentos */
-.section-equipamentos {
-  background-color: #f4f4f4;
-  padding: 80px 20px;
+.image-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.section-equipamentos h2 {
-  font-size: 36px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 40px;
+.image-gallery img:hover {
+    transform: scale(1.05);
 }
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Seção Portfólio */
+.portfolio-section {
+    background-color: #F2F2F2;
 }
 
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Seção de Contato */
+.contact-section {
+    background-color: #FAD7DF;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D4A05B;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    color: #333333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .cta-button {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333333;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
