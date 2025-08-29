@@ -1,0 +1,117 @@
+/* Resetando alguns estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do Corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: #FFD700;
+}
+
+/* Estilo das Seções */
+section {
+  padding: 40px 20px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.section-home {
+  background-color: #1c1c1c;
+  color: #fff;
+  text-align: center;
+}
+
+.section-about, .section-equipamentos, .section-career, .section-contact {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #FFD700;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Estilo de Responsividade */
+@media (max-width: 768px) {
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+}
